@@ -46,7 +46,7 @@ wf = Workflow()
 algo = wf.add_task(name="infer_yolo_26_seg", auto_connect=True)
 
 # Run on your image  
-wf.run_on(url="https://github.com/Ikomia-dev/notebooks/blob/main/examples/img/img_bike_rider.jpeg?raw=true")
+wf.run_on(url="https://raw.githubusercontent.com/Ikomia-dev/notebooks/refs/heads/main/examples/img/img_bike_rider.jpeg")
 
 # Inspect your result
 display(algo.get_image_with_mask_and_graphics())
@@ -96,7 +96,7 @@ algo.set_parameters({
 })
 
 # Run on your image  
-wf.run_on(url="https://github.com/Ikomia-dev/notebooks/blob/main/examples/img/img_bike_rider.jpeg?raw=true")
+wf.run_on(url="https://raw.githubusercontent.com/Ikomia-dev/notebooks/refs/heads/main/examples/img/img_bike_rider.jpeg")
 
 # Inspect your result
 display(algo.get_image_with_mask_and_graphics())
@@ -116,7 +116,7 @@ wf = Workflow()
 algo = wf.add_task(name="infer_yolo_26_seg", auto_connect=True)
 
 # Run on your image  
-wf.run_on(url="https://github.com/Ikomia-dev/notebooks/blob/main/examples/img/img_bike_rider.jpeg?raw=true")
+wf.run_on(url="https://raw.githubusercontent.com/Ikomia-dev/notebooks/refs/heads/main/examples/img/img_bike_rider.jpeg")
 
 # Iterate over outputs
 for output in algo.get_outputs():
