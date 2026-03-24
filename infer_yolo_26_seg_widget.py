@@ -1,9 +1,11 @@
+from PyQt6.QtWidgets import *
+
+from torch.cuda import is_available
+
 from ikomia import core, dataprocess
 from ikomia.utils import pyqtutils, qtconversion
-from infer_yolo_26_seg.infer_yolo_26_seg_process import InferYolo26SegParam
 
-from PyQt5.QtWidgets import *
-from torch.cuda import is_available
+from infer_yolo_26_seg.infer_yolo_26_seg_process import InferYolo26SegParam
 
 
 class InferYolo26SegWidget(core.CWorkflowTaskWidget):
@@ -39,7 +41,7 @@ class InferYolo26SegWidget(core.CWorkflowTaskWidget):
         self.browse_weight_file = pyqtutils.BrowseFileWidget(
             path=self.parameters.model_weight_file,
             tooltip="Select file",
-            mode=QFileDialog.ExistingFile
+            mode=QFileDialog.FileMode.ExistingFile
         )
         row = self.grid_layout.rowCount()
         self.grid_layout.addWidget(self.label_hyp, row, 0)
